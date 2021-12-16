@@ -2,6 +2,8 @@
 
 PORTAINER_VERSION=2.9.3
 DOCKER_COMPOSE_VERSION=2.2.2
+# comment this out if IPv6 is enabled on your host
+DISABLE_IPV6='true'
 
 if [ $(whoami) != 'root' ]; then
   echo "Please run as root"
