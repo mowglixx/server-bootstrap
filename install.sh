@@ -25,6 +25,9 @@ else
   # installing all the good stuff
   apt purge docker docker-engine docker.io containerd runc -y
   apt install software-properties-common build-essential ca-certificates gnupg curl lsb-release gcc make -y
+  # install mainline
+  add-apt-repository ppa:cappelikan/ppa
+  apt install mainline
 
   # add docker's gpg key
   curl -fsSL https://download.docker.com/linux/ubuntu/gpg | gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg
